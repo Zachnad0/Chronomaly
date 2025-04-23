@@ -1,0 +1,1192 @@
+[
+  [
+    {
+      "name": "Reactor Room A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Reactor Room C",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Reactor Control Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Exit Elevator",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        "Exit Elevator",
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Ventilation Shaft A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        45,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Laboratory Storage Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Laboratory Computer Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    }
+  ],
+  [
+    {
+      "name": "Reactor Room B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        "Reactor Safety Access",
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Reactor Room D",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Hallway B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Security Area A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        "Exit Elevator"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Hallway A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "doorKeys": [
+        null,
+        "Machine Room A",
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Laboratory A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Laboratory C",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    }
+  ],
+  [
+    {
+      "name": "Reactor Safety Access",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        "Reactor Safety Access"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Hallway D",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Hallway C",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Security Area B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Machine Room A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        "Machine Room A"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Laboratory B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Staff Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    }
+  ],
+  [
+    {
+      "name": "Ventilation Shaft B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Hallway E",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Loading Zone Offices",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Machine Room B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Chrono Chamber",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Observation Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Viewing Chamber",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        "Viewing Chamber",
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    }
+  ],
+  [
+    {
+      "name": "Server Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        "Server Room",
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Conference Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        "Server Room",
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Loading Zone A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Loading Zone C",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Machine Room C",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Decontamination Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        "Decontamination Room",
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Laboratory Office",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        "Decontamination Room",
+        null,
+        null,
+        "Viewing Chamber"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    }
+  ],
+  [
+    {
+      "name": "Test Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        "Testing Room"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Heavy Engineering C",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Cargo Elevator",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        "Cargo Elevator"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Air Filtration",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Boiler Room",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        "Boiler Room"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Staff Quarters A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Staff Quarters B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    }
+  ],
+  [
+    {
+      "name": "Heavy Engineering A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "doorKeys": [
+        null,
+        "Testing Room",
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Heavy Engineering B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Loading Zone B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        "Cargo Elevator",
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Loading Zone D",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Medical Bay",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        "Boiler Room",
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Staff Living Area A",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Staff Living Area B",
+      "description": "name",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    }
+  ]
+]
