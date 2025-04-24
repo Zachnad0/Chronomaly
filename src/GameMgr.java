@@ -1,10 +1,5 @@
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.FileSystem;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.InvalidPathException;
-import java.nio.file.Path;
+import java.nio.file.*;
 import java.util.*;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
@@ -17,11 +12,15 @@ public final class GameMgr
 
     private final Room[][] rooms;
     private final long gameStartUnixTime;
+    private GameState gameState;
+    private boolean mRoomADone, mRoomBDone, mRoomCDone;
 
     private GameMgr()
     {
         rooms = loadRooms();
         gameStartUnixTime = System.currentTimeMillis() / 1000;
+        gameState = GameState.WANDERING;
+        mRoomADone = mRoomBDone = mRoomCDone = false;
     }
 
     private Room[][] loadRooms()
@@ -70,7 +69,12 @@ public final class GameMgr
         return instance;
     }
 
-    public static Room getRoom(int x, int y)
+    public static void resetInstance()
+    {
+        instance = new GameMgr();
+    }
+
+    public static Room getRoomAt(int x, int y)
     {
         try
         {
@@ -82,9 +86,25 @@ public final class GameMgr
         }
     }
 
+    public static Room getRoomOfPlayer()
+    {
+        return getRoomAt(Player.posX(), Player.posY());
+    }
+
     public static void doClickAt(final int sceneX, final int sceneY)
     {
-        // TODO
+        if (sceneX < GUIMgr.INTR_RGN_LEFT || sceneX > GUIMgr.INTR_RGN_RIGHT || sceneY < GUIMgr.INTR_RGN_TOP || sceneY > GUIMgr.INTR_RGN_BOTTOM)
+            return;
+
+        System.out.println("Click is within interactable region");
+        int localX = sceneX - GUIMgr.INTR_RGN_LEFT, localY = sceneY - GUIMgr.INTR_RGN_TOP;
+        Interactable.tryGetAtPosInRoom(localX, localY, CLICK_RADIUS, getRoomOfPlayer()).ifPresent(GameMgr::doInteraction);
+    }
+
+    public static void doInteraction(String interactable)
+    {
+        System.out.println(String.format("Interacting with \"%s\"", interactable));
+        // TODO implement interactable stuff depending on situation...
     }
 
     public static boolean canMakeMove(final int fromX, final int fromY, final int dirX, final int dirY)
@@ -93,19 +113,43 @@ public final class GameMgr
         if (dirX == dirY || (dirX != 0 && dirY != 0))
             throw new IllegalArgumentException();
         int nextX = fromX + dirX, nextY = fromY + dirY;
-        if (nextX < 0 || nextX > MAX_X || nextY < 0 || nextY > MAX_Y)
+        if (!getInstance().gameState.equals(GameState.WANDERING) || nextX < 0 || nextX > MAX_X || nextY < 0 || nextY > MAX_Y)
             return false;
 
-        Room currRoom = getRoom(fromX, fromY);
-        Room nextRoom = getRoom(nextX, nextY);
+        Room currRoom = getRoomAt(fromX, fromY);
+        Room nextRoom = getRoomAt(nextX, nextY);
 
-        int currTime = GetGameTime();
-        return currRoom.canAccessInDir(dirX, dirY, currTime) && nextRoom.canAccessInDir(-dirX, -dirY, currTime);
+        int currTime = getGameTime();
+        return currRoom.canAccessInDir(dirX, dirY, currTime) && nextRoom.destructTime() > getGameTime();
     }
 
-    public static int GetGameTime()
+    /** Gives current time through game in seconds. Returns -1 if game has ended. */
+    public static int getGameTime()
     {
+        if (!List.of(GameState.IN_PUZZLE, GameState.WANDERING).contains(getInstance().gameState))
+            return -1;
         long currUnixTime = System.currentTimeMillis() / 1000;
         return (int)(currUnixTime - getInstance().gameStartUnixTime);
+    }
+
+    public static GameState gameState()
+    {
+        return getInstance().gameState;
+    }
+
+    public static void checkForEndgameStates()
+    {
+        if (getInstance().mRoomADone && getInstance().mRoomBDone && getInstance().mRoomCDone && getRoomOfPlayer().name().equals("Chrono Chamber"))
+        {
+            getInstance().gameState = GameState.WIN;
+            return;
+        }
+
+        if (getGameTime() >= Math.min(getRoomOfPlayer().destructTime(), 180) || getGameTime() == -1)
+        {
+            getInstance().gameState = GameState.DEATH;
+            return;
+        }
+        // TODO further states
     }
 }

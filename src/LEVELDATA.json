@@ -354,7 +354,7 @@
         null,
         null,
         null,
-        "Reactor Safety Access"
+        null
       ],
       "wallBreakTimes": [
         null,
@@ -629,7 +629,11 @@
         null
       ],
       "interactables": [
-        {"name":"test","left":160, "right":90}
+        {
+          "name": "test",
+          "left": 160,
+          "top": 90
+        }
       ]
     },
     {

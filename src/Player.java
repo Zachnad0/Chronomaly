@@ -56,4 +56,22 @@ public final class Player
         if (hasItem(itemName))
             getInstance().inventory.remove(itemName);
     }
+
+    public static int posX()
+    {
+        return getInstance().posX;
+    }
+
+    public static int posY()
+    {
+        return getInstance().posY;
+    }
+
+    public static Set<String> getInventory()
+    {
+        Set<String> inv = getInstance().inventory;
+        if (inv.isEmpty())
+            return Set.of("Nothing.", "Still nothing!", "Hmm...");
+        return new HashSet<>(inv);
+    }
 }

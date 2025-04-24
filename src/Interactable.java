@@ -26,7 +26,7 @@ public final class Interactable
         return room != null && roomLoc.equals(room);
     }
 
-    public static int closerToPoint(Interactable i1, Interactable i2, final int x, final int y)
+    private static int closerToPoint(Interactable i1, Interactable i2, final int x, final int y)
     {
         return (int)Math.signum(Math.hypot(x - i1.posX, y - i1.posY) - Math.hypot(x - i2.posX, y - i2.posY));
     }

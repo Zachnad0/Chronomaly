@@ -78,4 +78,19 @@ public final class Room
 
         return requiredKeys[getIndexFromDir(dirX, dirY)];
     }
+
+    public String name()
+    {
+        return name;
+    }
+
+    public String description()
+    {
+        return description;
+    }
+
+    public int destructTime()
+    {
+        return destructTime;
+    }
 }

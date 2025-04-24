@@ -15,6 +15,9 @@ import javafx.stage.Stage;
 
 public class Program extends Application
 {
+	private static GUIMgr guiMgr;
+	private static Timer gameLoopTimer;
+
 	public static void main(String[] args)
 	{
 		System.out.println("Program start.");
@@ -25,36 +28,79 @@ public class Program extends Application
 
 		// Startup JavaFX GUI
 		launch();
+		System.out.println("Fin.");
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception
 	{
 		primaryStage.setTitle("ChronomalyGame");
+		primaryStage.setResizable(false);
+		primaryStage.centerOnScreen();
+
 		Group root = new Group();
 		Canvas canvas = new Canvas(640, 480);
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 
-		// Render map view
-		drawMapGrid(gc);
-		// Render doors...
-		// TODO add further rendering layers
+		guiMgr = new GUIMgr(gc);
 
 		root.getChildren().add(canvas);
 		Scene scene = new Scene(root);
 		scene.setOnKeyPressed(Program::keypressEventHandler);
 		scene.setOnMouseReleased(Program::mouseEventHandler);
 		primaryStage.setScene(scene);
-		primaryStage.setResizable(false);
-		primaryStage.centerOnScreen();
+
 		primaryStage.show();
+
+		gameTick = 0;
+		TimerTask loopTask = new TimerTask()
+		{
+			@Override
+			public void run()
+			{
+				gameLoop(primaryStage, gc);
+			}
+		};
+		gameLoopTimer = new Timer();
+		gameLoopTimer.schedule(loopTask, 250, 250);
 	}
 
-	private void drawMapGrid(GraphicsContext gc)
+	private int gameTick = 0;
+
+	private void gameLoop(Stage gameStage, GraphicsContext gc)
 	{
-		ImageView imgView = new ImageView(new Image("./testimg.jpg", 400, 400, false, true));
-		imgView.setRotate(90);
-		gc.drawImage(imgView.snapshot(new SnapshotParameters(), null), 10, 10);
+		// System.out.println("Loop tick t=" + gameTick);
+
+		// Check gamestate
+		GameMgr.checkForEndgameStates();
+
+		switch (GameMgr.gameState())
+		{
+		case IN_PUZZLE:
+		case WANDERING:
+			// Nothing special yet
+			break;
+		case DEATH:
+			// Print death screen, restart game
+			gameLoopTimer.cancel();
+			gameStage.close();
+			return;
+		case WIN:
+			// Print win screen, end game
+			gameLoopTimer.cancel();
+			GameMgr.resetInstance();
+			gameStage.close();
+			return;
+		}
+
+		// Draw GUI
+		guiMgr.drawHUD();
+		guiMgr.drawRoomImage();
+		guiMgr.drawInventory();
+		guiMgr.drawRoomDescription();
+		guiMgr.drawClock();
+
+		gameTick++;
 	}
 
 	private static void keypressEventHandler(KeyEvent keyEvent)
