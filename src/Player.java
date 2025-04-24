@@ -5,13 +5,11 @@ public final class Player
     final int START_X = 3, START_Y = 4, MAX_X = 6, MAX_Y = 6;
     private static Player instance = null;
 
-    private final List<String> inventory;
+    private final Set<String> inventory = new HashSet<>();
     private int posX = START_X, posY = START_Y;
 
     private Player()
-    {
-        inventory = new ArrayList<>();
-    }
+    {}
 
     public static Player getInstance()
     {
@@ -24,12 +22,13 @@ public final class Player
     public boolean tryMoveHoriz(int x)
     {
         System.out.println("tryMoveVert(" + x + ")");
-        int propX = posX + x;
-        if (propX >= 0 && propX <= MAX_X)
+        if (GameMgr.canMakeMove(posX, posY, x, 0))
         {
-            posX = propX;
+            posX += x;
+            System.out.println("    -> true");
             return true;
         }
+        System.out.println("    -> false");
         return false;
     }
 
@@ -37,12 +36,24 @@ public final class Player
     public boolean tryMoveVert(int y)
     {
         System.out.println("tryMoveVert(" + y + ")");
-        int propY = posY + y;
-        if (propY >= 0 && propY <= MAX_X)
+        if (GameMgr.canMakeMove(posX, posY, 0, y))
         {
-            posY = propY;
+            posY += y;
+            System.out.println("    -> true");
             return true;
         }
+        System.out.println("    -> false");
         return false;
+    }
+
+    public static boolean hasItem(String itemName)
+    {
+        return getInstance().inventory.contains(itemName);
+    }
+
+    public static void consumeItem(String itemName)
+    {
+        if (hasItem(itemName))
+            getInstance().inventory.remove(itemName);
     }
 }

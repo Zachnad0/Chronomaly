@@ -7,6 +7,8 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import javafx.stage.Stage;
@@ -34,28 +36,30 @@ public class Program extends Application
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 
 		// Render map view
-		DrawMapGrid(gc);
+		drawMapGrid(gc);
 		// Render doors...
+		// TODO add further rendering layers
 
 		root.getChildren().add(canvas);
 		Scene scene = new Scene(root);
-		scene.setOnKeyPressed(Program::KeypressEventHandler);
+		scene.setOnKeyPressed(Program::keypressEventHandler);
+		scene.setOnMouseReleased(Program::mouseEventHandler);
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(false);
 		primaryStage.centerOnScreen();
 		primaryStage.show();
 	}
 
-	private void DrawMapGrid(GraphicsContext gc)
+	private void drawMapGrid(GraphicsContext gc)
 	{
 		ImageView imgView = new ImageView(new Image("./testimg.jpg", 400, 400, false, true));
 		imgView.setRotate(90);
 		gc.drawImage(imgView.snapshot(new SnapshotParameters(), null), 10, 10);
 	}
 
-	private static void KeypressEventHandler(KeyEvent keyEvent)
+	private static void keypressEventHandler(KeyEvent keyEvent)
 	{
-		// TODO all keybinds
+		System.out.println(String.format("Keypress: %s", keyEvent.getCode().toString()));
 		switch (keyEvent.getCode())
 		{
 		case UP:
@@ -73,5 +77,16 @@ public class Program extends Application
 		default:
 			break;
 		}
+	}
+
+	private static void mouseEventHandler(MouseEvent mouseEvent)
+	{
+		int mX = (int)mouseEvent.getSceneX(), mY = (int)mouseEvent.getSceneY();
+		MouseButton mB = mouseEvent.getButton();
+		System.out.println(String.format("MouseClick: %s @ (%d, %d)", mB.toString(), mX, mY));
+
+		// Only detect mouse primary
+		if (mB.equals(MouseButton.PRIMARY))
+			GameMgr.doClickAt(mX, mY);
 	}
 }

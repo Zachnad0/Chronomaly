@@ -11,15 +11,17 @@ import com.google.gson.JsonSyntaxException;
 
 public final class GameMgr
 {
-    private static final int MAX_X = 6, MAX_Y = 6;
+    private static final int MAX_X = 6, MAX_Y = 6, CLICK_RADIUS = 6;
     private static final String ROOMS_JSON_FILENAME = "./bin/LEVELDATA.json";
     private static GameMgr instance = null;
 
     private final Room[][] rooms;
+    private final long gameStartUnixTime;
 
     private GameMgr()
     {
         rooms = loadRooms();
+        gameStartUnixTime = System.currentTimeMillis() / 1000;
     }
 
     private Room[][] loadRooms()
@@ -57,19 +59,8 @@ public final class GameMgr
             System.out.println("JSON syntax is invalid!");
             throw e;
         }
+
         return result;
-
-        /*
-        Room[][] result = new Room[MAX_X + 1][];
-        for (int x = 0; x <= MAX_X; x++){
-            result[x] = new Room[MAX_Y + 1];
-            for (int y = 0; y <= MAX_Y;y++)
-            {
-        
-            }
-        }*/
-
-        // return result;
     }
 
     public static GameMgr getInstance()
@@ -83,11 +74,38 @@ public final class GameMgr
     {
         try
         {
-            return GameMgr.getInstance().rooms[x][y];
+            return getInstance().rooms[x][y];
         }
         catch (IndexOutOfBoundsException e)
         {
-            throw new IllegalArgumentException(String.format("Room not at coordinates (%d, %d)", x, y));
+            throw new IllegalArgumentException(String.format("No room at coordinates (%d, %d)", x, y));
         }
+    }
+
+    public static void doClickAt(final int sceneX, final int sceneY)
+    {
+        // TODO
+    }
+
+    public static boolean canMakeMove(final int fromX, final int fromY, final int dirX, final int dirY)
+    {
+        // Validity checks
+        if (dirX == dirY || (dirX != 0 && dirY != 0))
+            throw new IllegalArgumentException();
+        int nextX = fromX + dirX, nextY = fromY + dirY;
+        if (nextX < 0 || nextX > MAX_X || nextY < 0 || nextY > MAX_Y)
+            return false;
+
+        Room currRoom = getRoom(fromX, fromY);
+        Room nextRoom = getRoom(nextX, nextY);
+
+        int currTime = GetGameTime();
+        return currRoom.canAccessInDir(dirX, dirY, currTime) && nextRoom.canAccessInDir(-dirX, -dirY, currTime);
+    }
+
+    public static int GetGameTime()
+    {
+        long currUnixTime = System.currentTimeMillis() / 1000;
+        return (int)(currUnixTime - getInstance().gameStartUnixTime);
     }
 }
