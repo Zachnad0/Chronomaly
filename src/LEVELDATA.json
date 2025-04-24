@@ -2,7 +2,7 @@
   [
     {
       "name": "Reactor Room A",
-      "description": "name",
+      "description": "Humming with energy, the reactor room is the heart of the facility. In here is where the fuel rod can be accessed",
       "destructTime": 180,
       "doors": [
         false,
@@ -26,7 +26,7 @@
     },
     {
       "name": "Reactor Room C",
-      "description": "name",
+      "description": "Humming with energy, the reactor room is the heart of the facility",
       "destructTime": 180,
       "doors": [
         true,
@@ -43,14 +43,14 @@
       "wallBreakTimes": [
         null,
         null,
-        null,
+        15,
         null
       ],
       "interactables": []
     },
     {
       "name": "Reactor Control Room",
-      "description": "name",
+      "description": "Reactor conrols are located here. The reactor can be shut down from this room",
       "destructTime": 180,
       "doors": [
         false,
@@ -60,12 +60,12 @@
       ],
       "doorKeys": [
         null,
-        null,
+        "Reactor Control Room",
         null,
         null
       ],
       "wallBreakTimes": [
-        null,
+        15,
         null,
         null,
         null
@@ -74,8 +74,8 @@
     },
     {
       "name": "Exit Elevator",
-      "description": "name",
-      "destructTime": 180,
+      "description": "The exit elevator is in no working order, as it was shut down when the facility was abandoned",
+      "destructTime": 90,
       "doors": [
         false,
         true,
@@ -98,7 +98,7 @@
     },
     {
       "name": "Ventilation Shaft A",
-      "description": "name",
+      "description": "Airy ventilation shaft that contains a large combination lock, that seems to be connected to somewhere else in the facility",
       "destructTime": 180,
       "doors": [
         false,
@@ -115,14 +115,14 @@
       "wallBreakTimes": [
         null,
         null,
-        45,
+        15,
         null
       ],
       "interactables": []
     },
     {
       "name": "Laboratory Storage Room",
-      "description": "name",
+      "description": "Dusty storage room, nothing functional remains",
       "destructTime": 180,
       "doors": [
         false,
@@ -137,7 +137,7 @@
         null
       ],
       "wallBreakTimes": [
-        null,
+        15,
         null,
         null,
         null
@@ -146,8 +146,8 @@
     },
     {
       "name": "Laboratory Computer Room",
-      "description": "name",
-      "destructTime": 180,
+      "description": "Terminal containing logs on the proect test subjects",
+      "destructTime": 90,
       "doors": [
         false,
         true,
@@ -172,7 +172,7 @@
   [
     {
       "name": "Reactor Room B",
-      "description": "name",
+      "description": "Humming with energy, the reactor room is the heart of the facility",
       "destructTime": 180,
       "doors": [
         false,
@@ -196,7 +196,7 @@
     },
     {
       "name": "Reactor Room D",
-      "description": "name",
+      "description": "Humming with energy, the reactor room is the heart of the facility",
       "destructTime": 180,
       "doors": [
         true,
@@ -220,7 +220,7 @@
     },
     {
       "name": "Hallway B",
-      "description": "name",
+      "description": "Large empty walkway, with a few doors leading to other rooms",
       "destructTime": 180,
       "doors": [
         false,
@@ -232,7 +232,7 @@
         null,
         null,
         null,
-        null
+        "Reactor Control Room"
       ],
       "wallBreakTimes": [
         null,
@@ -244,7 +244,7 @@
     },
     {
       "name": "Security Area A",
-      "description": "name",
+      "description": "Security passthrough, for when people are to entered into the facility",
       "destructTime": 180,
       "doors": [
         true,
@@ -254,7 +254,7 @@
       ],
       "doorKeys": [
         null,
-        null,
+        "Security Area B",
         null,
         "Exit Elevator"
       ],
@@ -268,7 +268,7 @@
     },
     {
       "name": "Hallway A",
-      "description": "name",
+      "description": "Large empty walkway, with a few doors leading to other rooms",
       "destructTime": 180,
       "doors": [
         true,
@@ -292,7 +292,7 @@
     },
     {
       "name": "Laboratory A",
-      "description": "name",
+      "description": "Laborotory containing old equipment for the time travel project",
       "destructTime": 180,
       "doors": [
         true,
@@ -316,7 +316,7 @@
     },
     {
       "name": "Laboratory C",
-      "description": "name",
+      "description": "Laborotory containing equipment for the time travel project, also containing the much needed Echo Prism Drive",
       "destructTime": 180,
       "doors": [
         true,
@@ -342,7 +342,7 @@
   [
     {
       "name": "Reactor Safety Access",
-      "description": "name",
+      "description": "Radiation suits hang eerily, fans buzz above",
       "destructTime": 180,
       "doors": [
         false,
@@ -358,7 +358,7 @@
       ],
       "wallBreakTimes": [
         null,
-        null,
+        60,
         null,
         null
       ],
@@ -366,7 +366,7 @@
     },
     {
       "name": "Hallway D",
-      "description": "name",
+      "description": "No notable features, lights hum faintly",
       "destructTime": 180,
       "doors": [
         true,
@@ -390,8 +390,8 @@
     },
     {
       "name": "Hallway C",
-      "description": "name",
-      "destructTime": 180,
+      "description": "Floor slightly uneven, odd warmth radiates from walls",
+      "destructTime": 90,
       "doors": [
         true,
         true,
@@ -414,7 +414,7 @@
     },
     {
       "name": "Security Area B",
-      "description": "name",
+      "description": "Main security room with a large monitor, and a few terminals and keycard for high-security areas inside",
       "destructTime": 180,
       "doors": [
         false,
@@ -426,7 +426,7 @@
         null,
         null,
         null,
-        null
+        "Security Area B"
       ],
       "wallBreakTimes": [
         null,
@@ -438,7 +438,7 @@
     },
     {
       "name": "Machine Room A",
-      "description": "name",
+      "description": "Control panels line walls, faint hum of readiness, along with an empty slot that looks like it could fit a large crystalline object",
       "destructTime": 180,
       "doors": [
         false,
@@ -462,8 +462,8 @@
     },
     {
       "name": "Laboratory B",
-      "description": "name",
-      "destructTime": 180,
+      "description": "Scattered notes, overturned equipment, static crackles from speakers",
+      "destructTime": 120,
       "doors": [
         false,
         false,
@@ -486,7 +486,7 @@
     },
     {
       "name": "Staff Room",
-      "description": "name",
+      "description": "Half-drunk coffee cups, broken furniture, dust-coated photos",
       "destructTime": 180,
       "doors": [
         true,
@@ -512,7 +512,7 @@
   [
     {
       "name": "Ventilation Shaft B",
-      "description": "name",
+      "description": "Dust coats walls, air smells ionized",
       "destructTime": 180,
       "doors": [
         false,
@@ -528,16 +528,16 @@
       ],
       "wallBreakTimes": [
         null,
+        60,
         null,
-        null,
-        null
+        60
       ],
       "interactables": []
     },
     {
       "name": "Hallway E",
-      "description": "name",
-      "destructTime": 180,
+      "description": "Paint peels, faint vibrations felt beneath the floor.",
+      "destructTime": 90,
       "doors": [
         false,
         true,
@@ -559,8 +559,8 @@
       "interactables": []
     },
     {
-      "name": "Loading Zone Offices",
-      "description": "name",
+      "name": "Loading Zone Office",
+      "description": "Room containing an old office desk and rusting filing cabinets, the passcode to the Cargo elevator written on a note",
       "destructTime": 180,
       "doors": [
         false,
@@ -584,7 +584,7 @@
     },
     {
       "name": "Machine Room B",
-      "description": "name",
+      "description": "Thick cables snake across floor, pulsing faintly, leading to a large machine with what looks to be a slot for a power source",
       "destructTime": 180,
       "doors": [
         false,
@@ -594,7 +594,7 @@
       ],
       "doorKeys": [
         null,
-        null,
+        "Machine Room B",
         null,
         null
       ],
@@ -608,7 +608,7 @@
     },
     {
       "name": "Chrono Chamber",
-      "description": "name",
+      "description": "A large machine sits in the center of the room the air around it shimmers faintly and time feels heavy and warped the closer you approach",
       "destructTime": 180,
       "doors": [
         false,
@@ -628,11 +628,13 @@
         null,
         null
       ],
-      "interactables": []
+      "interactables": [
+        {"name":"test","left":160, "right":90}
+      ]
     },
     {
       "name": "Observation Room",
-      "description": "name",
+      "description": "Empty chairs face flickering monitors and cracked glass.",
       "destructTime": 180,
       "doors": [
         true,
@@ -649,14 +651,14 @@
       "wallBreakTimes": [
         null,
         null,
-        null,
+        15,
         null
       ],
       "interactables": []
     },
     {
       "name": "Viewing Chamber",
-      "description": "name",
+      "description": "Tall lookthrough covers most of the north the wall, silence looms",
       "destructTime": 180,
       "doors": [
         false,
@@ -671,7 +673,7 @@
         null
       ],
       "wallBreakTimes": [
-        null,
+        15,
         null,
         null,
         null
@@ -682,7 +684,7 @@
   [
     {
       "name": "Server Room",
-      "description": "name",
+      "description": "A single console sits in the room with tall towers that blink rhythmically, like heartbeats in darkness",
       "destructTime": 180,
       "doors": [
         false,
@@ -700,13 +702,13 @@
         null,
         null,
         null,
-        null
+        60
       ],
       "interactables": []
     },
     {
       "name": "Conference Room",
-      "description": "name",
+      "description": "Papers swirl as ventilation kicks to life",
       "destructTime": 180,
       "doors": [
         true,
@@ -722,7 +724,7 @@
       ],
       "wallBreakTimes": [
         null,
-        null,
+        60,
         null,
         null
       ],
@@ -730,7 +732,7 @@
     },
     {
       "name": "Loading Zone A",
-      "description": "name",
+      "description": "Crates scattered about, nothing usable",
       "destructTime": 180,
       "doors": [
         false,
@@ -754,7 +756,7 @@
     },
     {
       "name": "Loading Zone C",
-      "description": "name",
+      "description": "Forklift rusted still, no usable tools.",
       "destructTime": 180,
       "doors": [
         true,
@@ -766,7 +768,7 @@
         null,
         null,
         null,
-        null
+        "Machine Room B"
       ],
       "wallBreakTimes": [
         null,
@@ -778,7 +780,7 @@
     },
     {
       "name": "Machine Room C",
-      "description": "name",
+      "description": "Dense steam lingers, gauges twitch without reason, there is a large console in the room, which controls the time machine, it has connection points that could have a external device connected through",
       "destructTime": 180,
       "doors": [
         false,
@@ -788,7 +790,7 @@
       ],
       "doorKeys": [
         null,
-        null,
+        "Machine Room C",
         null,
         null
       ],
@@ -802,8 +804,8 @@
     },
     {
       "name": "Decontamination Room",
-      "description": "name",
-      "destructTime": 180,
+      "description": "Lights pulse red, air reeks of sterilizing chemicals",
+      "destructTime": 90,
       "doors": [
         false,
         false,
@@ -826,7 +828,7 @@
     },
     {
       "name": "Laboratory Office",
-      "description": "name",
+      "description": "Desk buried in memos, clocks show different times.",
       "destructTime": 180,
       "doors": [
         true,
@@ -851,42 +853,18 @@
   ],
   [
     {
-      "name": "Test Room",
-      "description": "name",
+      "name": "Heavy Engineering A",
+      "description": " Giant tools rest under dim orange lamps",
       "destructTime": 180,
       "doors": [
         false,
-        false,
-        false,
-        true
+        true,
+        true,
+        false
       ],
       "doorKeys": [
         null,
-        null,
-        null,
-        "Testing Room"
-      ],
-      "wallBreakTimes": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "interactables": []
-    },
-    {
-      "name": "Heavy Engineering C",
-      "description": "name",
-      "destructTime": 180,
-      "doors": [
-        false,
-        false,
-        false,
-        true
-      ],
-      "doorKeys": [
-        null,
-        null,
+        "Testing Room",
         null,
         null
       ],
@@ -899,36 +877,12 @@
       "interactables": []
     },
     {
-      "name": "Cargo Elevator",
-      "description": "name",
+      "name": "Heavy Engineering B",
+      "description": "Fans groan above scattered blueprints and parts",
       "destructTime": 180,
       "doors": [
-        false,
-        false,
-        false,
-        true
-      ],
-      "doorKeys": [
-        null,
-        null,
-        null,
-        "Cargo Elevator"
-      ],
-      "wallBreakTimes": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "interactables": []
-    },
-    {
-      "name": "Air Filtration",
-      "description": "name",
-      "destructTime": 180,
-      "doors": [
-        false,
-        false,
+        true,
+        true,
         true,
         false
       ],
@@ -942,47 +896,23 @@
         null,
         null,
         null,
-        null
+        60
       ],
       "interactables": []
     },
     {
-      "name": "Boiler Room",
-      "description": "name",
+      "name": "Loading Zone B",
+      "description": "Ceiling vents groan, shadows flicker and vanish",
       "destructTime": 180,
       "doors": [
-        false,
-        false,
-        false,
+        true,
+        true,
+        true,
         true
       ],
       "doorKeys": [
         null,
-        null,
-        null,
-        "Boiler Room"
-      ],
-      "wallBreakTimes": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "interactables": []
-    },
-    {
-      "name": "Staff Quarters A",
-      "description": "name",
-      "destructTime": 180,
-      "doors": [
-        false,
-        false,
-        false,
-        true
-      ],
-      "doorKeys": [
-        null,
-        null,
+        "Cargo Elevator",
         null,
         null
       ],
@@ -995,8 +925,80 @@
       "interactables": []
     },
     {
-      "name": "Staff Quarters B",
-      "description": "name",
+      "name": "Loading Zone D",
+      "description": "Wind whistles through broken overhead shutters",
+      "destructTime": 180,
+      "doors": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Medical Bay",
+      "description": "Cots stripped; faint smell of antiseptic lingers",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        "Boiler Room",
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Staff Living Area A",
+      "description": "Torn couches, nothing of interest",
+      "destructTime": 180,
+      "doors": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Staff Living Area B",
+      "description": "Old decrepit kitchen and common area, nothing of interest in here",
       "destructTime": 180,
       "doors": [
         true,
@@ -1021,41 +1023,89 @@
   ],
   [
     {
-      "name": "Heavy Engineering A",
-      "description": "name",
+      "name": "Test Room",
+      "description": "Observation glass cracked, metal clamps rust on floor, on a workbench is a experimental processor, that seems to have been left behind",
       "destructTime": 180,
       "doors": [
         false,
-        true,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        "Testing Room"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Heavy Engineering C",
+      "description": "Walls scorched, looking like some loose live wires have whipped them at some point in time, under the scorch marks is a work table that can be used",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Cargo Elevator",
+      "description": "Chains sway, panel beeps unprompted at intervals, along with the last delivery are a bunch of diplays and loose wires that could be of use",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "doorKeys": [
+        null,
+        null,
+        null,
+        "Cargo Elevator"
+      ],
+      "wallBreakTimes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "interactables": []
+    },
+    {
+      "name": "Air Filtration",
+      "description": "Fans spin lazily, choking on age and dust, with what appears to be a note stuck in one of the filters",
+      "destructTime": 180,
+      "doors": [
+        false,
+        false,
         true,
         false
       ],
       "doorKeys": [
         null,
-        "Testing Room",
-        null,
-        null
-      ],
-      "wallBreakTimes": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "interactables": []
-    },
-    {
-      "name": "Heavy Engineering B",
-      "description": "name",
-      "destructTime": 180,
-      "doors": [
-        true,
-        true,
-        true,
-        false
-      ],
-      "doorKeys": [
-        null,
         null,
         null,
         null
@@ -1069,44 +1119,20 @@
       "interactables": []
     },
     {
-      "name": "Loading Zone B",
-      "description": "name",
+      "name": "Boiler Room",
+      "description": "Pipes hiss, condensation drips in steady rhythm on one wall is a pump control that alters the amount of coolants the reactors receives",
       "destructTime": 180,
       "doors": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "doorKeys": [
-        null,
-        "Cargo Elevator",
-        null,
-        null
-      ],
-      "wallBreakTimes": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "interactables": []
-    },
-    {
-      "name": "Loading Zone D",
-      "description": "name",
-      "destructTime": 180,
-      "doors": [
-        true,
         false,
-        true,
+        false,
+        false,
         true
       ],
       "doorKeys": [
         null,
         null,
         null,
-        null
+        "Boiler Room"
       ],
       "wallBreakTimes": [
         null,
@@ -1117,37 +1143,13 @@
       "interactables": []
     },
     {
-      "name": "Medical Bay",
-      "description": "name",
+      "name": "Staff Quarters A",
+      "description": "Beds unmade, personal effects scattered in silence a stray note lays on a bedside table",
       "destructTime": 180,
       "doors": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "doorKeys": [
-        null,
-        "Boiler Room",
-        null,
-        null
-      ],
-      "wallBreakTimes": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "interactables": []
-    },
-    {
-      "name": "Staff Living Area A",
-      "description": "name",
-      "destructTime": 180,
-      "doors": [
-        true,
-        true,
-        true,
+        false,
+        false,
+        false,
         true
       ],
       "doorKeys": [
@@ -1165,8 +1167,8 @@
       "interactables": []
     },
     {
-      "name": "Staff Living Area B",
-      "description": "name",
+      "name": "Staff Quarters B",
+      "description": "Mold creeps across floor and ceiling, walls covered in notes, one in particular sticks out to you",
       "destructTime": 180,
       "doors": [
         true,
